@@ -42,8 +42,15 @@ btn.addEventListener(`click` , (event) => {
 const classList = document.getElementsByClassName("box");
 for(let i = 0 ; i < classList.length; i++) {
   classList[i].addEventListener(`click`, (e) => {
-    e.target.style.backgroundColor = 'green';
-    e.target.textContent = `clicked`
+    if(e.target.style.backgroundColor === 'green') {
+      e.target.style.backgroundColor = 'red';
+      e.target.textContent = ``
+      
+    }else {
+      e.target.style.backgroundColor = 'green';
+      e.target.textContent = `clicked`
+    }
+    
   });
 
 };
